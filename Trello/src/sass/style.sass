@@ -1,0 +1,1094 @@
+@import "normalizes.scss"
+@import "resets.scss"
+
+*
+  box-sizing: border-box
+
+@font-face 
+  font-family: "Poppins-Regular"
+  src: url('../font/Poppins-Regular.woff2')
+  font-weight: 400
+  font-style: normal
+
+@font-face 
+  font-family: "Poppins-SemiBold"
+  src: url('../font/Poppins-SemiBold.woff2')
+  font-weight: 600
+  font-style: normal
+
+@font-face 
+  font-family: "Poppins-Bold"
+  src: url('../font/Poppins-Bold.woff2')
+  font-weight: 700
+  font-style: normal
+
+@font-face 
+  font-family: "Poppins-Light"
+  src: url('../font/Poppins-Light.woff2')
+  font-weight: 300
+  font-style: normal
+
+$white: #ffffff
+$black: #000000
+$blue: #3E86F5
+$gray: #7C7C7C
+
+html
+  font-family: "Poppins-Regular"
+  color: $white
+  width: 100%
+  max-width: 100%
+  overflow-x: hidden
+
+body
+  width: 100%
+  max-width: 100%
+  overflow-x: hidden
+  background: #F7F7F7
+
+.container
+  max-width: 1140px
+  margin: 0 auto
+
+.main-section
+  &__background
+    background: url(../img/background.png) center center / cover no-repeat fixed
+    min-height: 952px
+    padding-top: 24px
+  &__header
+    display: flex
+    justify-content: space-between
+    margin-bottom: 190px
+  &__nav-menu
+    display: flex
+    align-items: center
+
+.main-section__title
+  font-size: 48px
+
+.nav-menu
+  display: flex
+  flex-direction: row
+  &__item
+    font-size: 24px
+    a
+      color: $white
+      text-decoration: none
+      width: 141px
+      height: 65px
+      display: flex
+      justify-content: center
+      align-items: center
+      border-radius: 10px
+      &:hover
+        color: $blue
+        background: $white
+        transition: 0.5s
+
+.main-title
+  display: flex
+  justify-content: center
+  flex-direction: column
+  &__title
+    font-size: 64px
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    text-align: center
+    margin-bottom: 40px
+    line-height: 96px
+  &__text
+    font-size: 24px
+    display: flex
+    justify-content: center
+    text-align: center
+    line-height: 48px
+    
+.section-second
+  height: 1376px
+  
+
+.block-ticket-purchase
+  width: 1180px
+  height: 274px
+  background: $white
+  border-radius: 0 50px 50px 50px
+  display: flex
+  justify-content: space-evenly
+  align-items: center
+  position: relative
+  bottom: 45px
+  margin-bottom: 160px
+
+  &__fight-hotel
+    width: 279px
+    height: 100px
+    background: $white
+    border-radius: 25px 25px 0 0 
+    position: absolute
+    top: -99px
+    left: 0px
+  &__city
+    width: 381.59px
+    height: 154px
+    border-radius: 25px
+    border: 2px solid $gray
+    display: flex
+    justify-content: space-around
+    align-items: center
+  &__text-light
+    font-size: 18px
+    color: $gray
+    display: flex
+    margin-bottom: -4px
+  &__text-bold
+    font-size: 24px
+    font-family: "Poppins-SemiBold"
+    color: #000
+  &__date-selection
+    width: 477.26px
+    height: 154px
+    border-radius: 25px
+    border: 2px solid $gray
+    display: flex
+    justify-content: space-around
+    align-items: center
+  &__icon-fight
+    position: relative
+    top: -2px
+    right: -6px
+  &__search
+    width: 154px
+    height: 143px
+    border-radius: 65px
+    background: rgba(62, 134, 245, 0.8)
+    display: flex
+    justify-content: center
+    align-items: center
+    img
+      width: 50px
+      height: 50px
+
+.icon-fight__rotate
+  transform: rotate(180deg)
+
+.fight-hotel
+  display: flex
+  justify-content: space-around
+  align-items: center
+  div
+    width: 121px
+    height: 66px
+    color: #000
+    border-radius: 25px
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 18px
+    font-family: "Poppins-SemiBold"
+    &:hover
+      background: rgba(62, 134, 245, 0.2)
+      transition: 0.5s
+.fight-hotel__fight
+  img
+    top: -1px
+    position: relative
+.fight-hotel__hotel
+  img
+    padding-right: 5px
+    top: -2px
+    position: relative
+
+.second-section__title
+  font-size: 48px
+  font-family: "Poppins-Bold"
+  color: $black
+  display: flex
+  justify-content: center
+  margin-bottom: 60px
+
+.second-nav-menu
+  display: flex
+  justify-content: center
+  &__list
+    width: 340px
+    height: 66px
+    background: $white
+    font-size: 18px
+    border-radius: 10px
+    margin-bottom: 40px
+    display: flex
+    justify-content: center
+    flex-direction: row
+    align-items: center
+  &__item
+    margin-right: 5px
+    &:last-child
+      margin-right: 0
+  a
+    text-decoration: none
+    color: $gray
+    width: 100px
+    height: 46px
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 10px
+    &:hover
+      color: $white
+      background: $blue
+      transition: 0.5s
+
+.cards-box_type-box
+  margin-right: 20px
+
+.cards-box
+  display: flex
+  flex-direction: row
+  justify-content: center
+  &__item
+    width: 380px
+    height: 457px
+    border-radius: 50px
+    background: $white
+  &__img
+    margin: 21px 0 0 27px
+  &__date
+    color: $gray
+    font-size: 18px
+    letter-spacing: 5px
+    transform: rotate(90deg)
+    position: relative
+    right: -160px
+    top: -54px
+  &__label
+    width: 69px
+    height: 21px
+    background: #FCDDEC
+    color: #F178B6
+    border-radius: 50px
+    font-size: 14px
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-right: 12px
+  &__label-adventure
+    width: 104px
+    height: 21px
+    background: #F1F1FD
+    color: #7879F1
+    border-radius: 100px
+    font-size: 14px
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-right: 12px
+  &__description
+    font-size: 14px
+    color: rgba(0, 0, 0, 0.5)
+    display: flex
+    line-height: 21px
+    display: flex
+    justify-content: center
+    position: relative
+    right: 43px
+  &__description-adventure
+    font-size: 14px
+    color: rgba(0, 0, 0, 0.5)
+    display: flex
+    line-height: 21px
+    display: flex
+    justify-content: center
+    position: relative
+    right: 24px
+  &__title
+    font-size: 24px
+    font-family: "Poppins-SemiBold"
+    color: $black
+    display: inline
+    text-align: center
+    line-height: 45px
+    position: relative
+    top: -3px
+    right: -44px
+  &__item-title
+    font-size: 18px
+    font-family: "Poppins-Regular"
+    color: rgba(0, 0, 0, 0.5)
+  &__button
+    display: inline-flex
+    position: relative
+    top: -47px
+    right: -228px
+    a
+      width: 107px
+      height: 47px
+      border-radius: 10px
+      background: #F2F6FF
+      display: flex
+      justify-content: center
+      align-items: center
+      text-decoration: none
+      color: $blue
+      &:hover
+        box-shadow: 0px 0px 25px 0px #0000001A
+        transition: 0.3s
+  &__text
+      text-align: center
+
+.section-third
+  height: 820px
+  background:rgba(0, 0, 0, 0.05)
+.block-contact
+  position: relative
+  &__item
+    width: 180px
+    height: 120px
+    background: $white
+    border-radius: 35px
+    font-size: 18px
+    font-family: "Poppins-Light"
+    color: #000000
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    box-shadow: 0px 0px 25px 0px #0000001A
+  &__integer
+    font-size: 36px
+    font-family: "Poppins-SemiBold"
+    color: $blue
+
+.wrapper
+  display: flex
+  flex-direction: row
+.left-wrapper
+  width: 120%
+  position: relative
+.block-contact
+  display: flex
+  justify-content: flex-end
+.right-wrapper
+  width: 100%
+  margin-left: 125px
+.block-description
+  max-width: 500px
+  max-height: 500px
+  &__title
+    font-size: 48px
+    line-height: 72px
+    font-family: "Poppins-SemiBold"
+    color: $black
+    margin-bottom: 20px
+  &__text
+    font-size: 20px
+    line-height: 40px
+    color: rgba(0, 0, 0, 0.5)
+    max-width: 580px
+    max-height: 420px
+  &__button
+    width: 179px
+    height: 75px
+    font-size: 20px
+    background: $blue
+    display: flex
+    justify-content: center
+    align-items: center
+    text-decoration: none
+    border-radius: 10px
+    color: $white
+    box-shadow: 0px 0px 25px 0px #0000001A
+    &:hover
+      box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2) inset
+.button-contact
+  position: relative
+  top: 218px
+  right: 2px
+.block-contact-item-first
+  position: absolute
+  top: 41px
+  right: -93px
+.block-contact-item-second
+  position: absolute
+  top: 383px
+  right: 390px
+.block-contact-item-third
+  position: absolute
+  top: 542px
+  right: -93px
+.section-four
+  height: 740px
+  padding-top: 200px
+  &__title
+    font-size: 48px
+    font-family: "Poppins-SemiBold"
+    color: $black
+    text-align: center
+    margin-bottom: 51px
+    margin-top: 140px
+  &__nav-menu
+    display: flex
+    justify-content: center
+.nav-menu-choice
+    display: flex
+    flex-direction: row
+    width: 330px
+    margin-bottom: 90px
+    &__item
+      color: rgba(0, 0, 0, 0.5)
+      font-family: "Poppins-SemiBold"
+      width: 100%
+      height: 40px
+      display: flex
+      justify-content: center
+      align-items: center
+      &:hover
+        color: $blue
+        transition: 0.5s
+
+.cards-box-two
+  display: flex
+  flex-direction: row
+  justify-content: center
+  &__box
+    background: $white
+    margin-right: 20px
+    width: 280px
+    height: 290px
+    border-radius: 25px
+    box-shadow: 2px 2px 8px 2px #0000001A
+    position: relative
+    &:last-child
+      margin-right: 0
+  &__img
+    margin: 10px 10px 20px 10px
+  &__star
+      position: absolute
+      top: 23px
+      right: 21px
+      width: 55px
+      height: 20px
+      background: $white
+      color: $black
+      display: flex
+      justify-content: center
+      align-items: center
+      border-radius: 25px
+      span
+        font-size: 12px
+      img
+        margin-right: 2px
+  h3
+    font-size: 18px
+    font-family: "Poppins-SemiBold"
+    color: $black
+    margin-bottom: 5px
+    margin-left: 30px
+    display: inline
+  p
+    color: rgba(0, 0, 0, 0.5)
+    margin-left: 30px
+    img
+      position: relative
+      top: 2px
+
+.section-five
+  height: 690px
+  margin-top: 250px
+.slider
+  display: flex
+  justify-content: center
+  margin-bottom: 70px
+  &__block
+    position: relative
+    width: 580px
+    height: 410px
+    background: url(../img/cquote.png) center 36px $white
+    background-repeat: no-repeat
+    border-radius: 50px
+    margin-right: 20px
+    &:last-child
+      margin-right: 0
+  &__text
+    color: #000
+    text-align: center
+    line-height: 41px
+    font-size: 20px
+    margin: 84px 20px 0 20px
+  &__user
+    text-align: center
+    margin-top: 10px
+  &__user-blue
+    color: $blue
+    font-size: 20px
+    line-height: 40px
+  &__user-grey
+    color: rgba(0, 0, 0, 0.5)
+    font-size: 20px
+  :nth-child(2) .elipse
+    background: url(../img/el2.png), $white
+    background-repeat: no-repeat
+    background-position: center
+  &__button
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-bottom: 135px
+  &__button-item
+    width: 60px
+    height: 60px
+    border: 2px solid rgba(62, 134, 245, 0.5)
+    border-radius: 15px
+    transform: matrix(-1, 0, 0, 1, 0, 0)
+    margin-right: 20px
+    display: flex
+    justify-content: center
+    align-items: center
+    &:last-child
+      margin-right: 0
+    &:hover
+      background: RGBA(255,255,255,0.60)
+      transition: 0.4s
+    &:first-child i
+      transform: rotate(180deg)
+    i
+    color: $blue
+    font-size: 30px
+
+.elipse
+  width: 179.5px
+  height: 134px
+  clip-path: ellipse(49% 50.00% at 50% 50%)
+  display: flex
+  justify-content: center
+  margin: 0 auto
+  background: url(../img/el1.png), $white
+  background-repeat: no-repeat
+  background-position: center
+  margin-top: 3px
+  span
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 55px
+    height: 20px
+    background: $white
+    color: $black
+    border-radius: 25px
+    font-size: 12px
+    position: relative
+    top: 25px
+    right: -44px
+  img
+    margin-right: 2px
+
+.section-footer
+  height: 670px
+.banner
+  width: 1180px
+  height: 500px
+  background: url(../img/banner.png)
+  background-repeat: no-repeat
+  background-size: cover
+  border-radius: 100px
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  margin-bottom: 85px
+  &__title
+    font-size: 48px
+    font-family: "Poppins-SemiBold"
+    color: $white
+    text-align: center
+    margin-bottom: 40px
+  &__button
+    width: 220px
+    height: 80px
+    display: flex
+    justify-content: center
+    align-items: center
+    color: $blue
+    border-radius: 25px
+    font-size: 25px
+    text-decoration: none
+    background: $white
+    transition: 1.5s
+    &:hover
+      box-shadow: inset 5px 5px 25px 5px #0000001A
+      transition: 0.5s
+    &:focus
+      transition: 0.5s
+
+.nav-menu-footer
+  display: flex
+  &__item
+    margin-right: 50px
+    &:last-child
+      margin-right: 0
+  a
+    color: rgba(0, 0, 0, 0.75)
+    font-size: 20px
+    text-decoration: none
+    width: 70px
+    height: 50px
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: 0.5s
+    border-radius: 10px
+    &:hover
+     background: rgba(255, 255, 255, 0.50)
+     transition: 0.5s
+  &__copyright
+    display: flex
+    color: rgba(0, 0, 0, 0.5)
+    font-size: 20px
+footer
+  display: flex
+  justify-content: center
+  align-items: center
+  justify-content: space-between
+  flex-direction: row-reverse
+
+.burger-css, .mobile-menu, .mobile-nav-button, .mobile-nav-button__line
+  display: none
+
+@media (max-width: 1200px)
+  .container
+    width: 1140px
+  .button-contact
+      top: 137px
+      right: 2px
+  .block-ticket-purchase
+    &__search
+      width: 140px
+    &__date-selection
+      width: 390px
+    &__city
+      width: 350px
+  .cards-box
+    &__item
+      width: 380px
+      height: 416px
+    &__img
+      margin: 15px 0 0 20px
+      width: 249px
+    &__date
+      right: -135px
+      top: -53px
+    &__description
+      right: 23px
+    &__description-adventure
+      right: 8px
+    &__button
+      top: -46px
+      right: -185px
+  .left-wrapper
+    width: 185%
+  .block-contact
+    &__item
+      width: 165px
+      height: 110px
+    &__item-first
+      right: -86px
+    &__item-second
+      right: 313px
+    &__item-third
+      right: -86px
+  .block-description
+    &__title
+      font-size: 40px
+      line-height: 50px
+    &__text
+      font-size: 18px
+      line-height: 28px
+  .right-wrapper
+    margin-top: 7px
+  .cards-box-two
+    flex-flow: row wrap
+    width: 600px !important
+    &__box
+      margin-right: 0
+      margin-bottom: 15px
+      margin-left: 15px
+      &:nth-child(2n+1)
+        margin-left: 0
+        margin-bottom: 0
+  .nav-menu-choice
+    margin-bottom: 20px
+  .slider
+    &__block
+      height: 454px
+
+  .button-mobile
+    display: none
+
+// Маленький монитор или горизонтальный планшет
+@media (max-width: 1199px)
+  .container
+    width: 960px
+  .section-four 
+      height: 900px
+// Вертикальный планшет
+@media (max-width: 991px)
+  .container
+    width: 720px
+  .block-ticket-purchase
+    margin-bottom: 97px
+    height: 247px
+    &__city
+      margin: 0 10px 0 10px
+      height: 133px
+      width: 365px
+    &__date-selection
+      margin-right: 5px
+      height: 133px
+    &__search
+      margin-right: 7px
+      width: 88px
+      height: 70px
+    &__text-light
+      font-size: 16px
+    &__text-bold
+      font-size: 21px
+    &__icon-fight
+      top: -4px
+      right: -1px
+  .cards-box
+    &__item
+      width: 223px
+      height: 334px
+    &__img
+      width: 178px
+    &__date
+      right: -99px
+      top: -47px
+      font-size: 16px
+    &__label
+      width: 65px
+      height: 20px
+      font-size: 13px
+    &__description
+      right: -1px
+      font-size: 13px
+    &__title
+      font-size: 20px
+      right: -20px
+    &__item-title
+      font-size: 15px
+    &__button
+      top: -45px
+      right: -137px
+      width: 70px
+      height: 19px
+      a
+        width: 100px
+        height: 40px
+        font-size: 13px
+    &__label-adventure
+      width: 85px
+      height: 20px
+      font-size: 13px
+    &__description-adventure
+      font-size: 13px
+
+  .block-contact
+    &__img
+      width: 400px
+    &__item
+      font-size: 15px
+    &__integer
+      font-size: 33px
+  .right-wrapper
+    margin-left: 104px
+  .block-description
+    &__title
+      font-size: 33px
+      margin-bottom: 5px
+      line-height: 37px
+    &__text
+      line-height: 23px
+    &__button
+      width: 140px
+      height: 60px
+      font-size: 18px
+  .button-contact
+    top: 134px
+    right: 2px
+  .block-contact-item-first
+    right: -90px
+  .block-contact-item-second
+    top: 250px
+    right: -90px
+  .block-contact-item-third
+    top: 457px
+    right: -90px
+  .section-second
+    height: 1114px
+  .main-section
+    &__header
+      margin-bottom: 140px
+  .main-title
+    &__title
+      line-height: 75px
+    &__text
+      line-height: 40px
+  .elipse
+    width: 266.5px
+    height: 126px
+    -webkit-clip-path: ellipse(49% 50% at 50% 50%)
+    clip-path: ellipse(28.14% 48.41% at 50% 50%)
+  .section-four
+    padding-top: 100px
+    height: 900px
+    &__title
+      margin-top: -60px
+  .section-five
+    margin-top: 0px
+    height: 707px
+// Горизонтальный телефон
+@media (max-width: 767px)
+  .container
+    width: 540px
+  .burger-css, .mobile-menu, .mobile-nav-button, .mobile-nav-button__line
+    display: block
+  .main-section
+    &__background
+      padding-top: 0
+    &__nav-menu
+      display: none
+    &__header
+      display: flex
+      justify-content: flex-start
+      background: #18181A
+      width: 100%
+      z-index: 40
+      position: fixed
+      padding-top: 10px
+      padding-bottom: 10px
+    &__title
+      margin-left: 10px
+  .section-four
+    height: 100%
+  .section-five
+    margin-top: 0px
+
+  .main-title__title
+    margin-bottom: 34px
+    margin-top: 111px
+
+  .block-ticket-purchase 
+    margin-bottom: 54px
+    height: 272px
+    display: flex
+    flex-direction: column
+    padding-top: 30px
+    &__city
+      margin: 0
+      margin-bottom: 0px
+      height: 133px
+      width: 365px
+      margin-bottom: 10px
+    &__date-selection
+      margin-right: 0
+    &__search
+      width: 59px
+      height: 93px
+      position: relative
+      top: -118px
+      right: -236px
+    &__fight-hotel
+      width: 249px
+      height: 100px
+  .second-section
+    &__title h1
+      text-align: center
+  .cards-box
+    flex-direction: column
+    align-items: center
+  .cards-box_type-box
+    margin-right: 0
+    margin-bottom: 20px
+  .section-second
+    height: 1628px
+  
+  .section-third
+    height: 1204px
+    padding-top: 50px
+  .wrapper
+    flex-direction: column
+  .left-wrapper
+    width: 100%
+  .block-contact
+    justify-content: center
+    &__img
+      margin-bottom: 30px
+  
+  .right-wrapper
+    margin: 20px 40px 0 40px
+    width: 100%
+  
+  .block-description
+    &__text
+        line-height: 34px
+  
+  .button-contact
+    top: 22px
+    right: -163px
+
+  .block-contact-item-first
+    right: 32px
+  .block-contact-item-second
+    right: 346px
+  .block-contact-item-third
+    right: 30px
+
+  .cards-box-two
+    width: 100% !important
+    justify-content: center
+    &__box
+      width: 250px
+      height: 250px
+    margin-right: 10px
+    &__img
+      width: 90%
+    
+  .slider
+    margin-bottom: 120px
+    &__block
+      margin-right: 15px
+    &__text
+      line-height: 36px
+      font-size: 17px
+    &__user
+      margin-top: -3px
+
+  .elipse
+    clip-path: ellipse(29.14% 68.25% at 48.87% 25.4%)
+    margin-top: 2px
+
+  .nav-menu-footer a
+    width: 50px
+
+// Вертикальный телефон
+@media (max-width: 575px)
+  .container
+    width: 100%
+  .main-title
+    &__title
+      font-size: 52px
+      line-height: 69px
+    &__text
+      font-size: 23px
+  .block-ticket-purchase
+    margin-bottom: 55px
+    height: 268px
+    padding-top: 12px
+    border-radius: 0 0px 50px 50px
+    &__fight-hotel
+      width: 100%
+      display: flex
+      justify-content: center
+    &__city
+      width: 294px
+    &__date-selection
+      width: 294px
+    &__search
+      width: 87px
+      height: 91px
+      top: 2px
+      right: -4px
+      margin-bottom: 10px
+      margin-top: 10px
+      margin-right: 0
+  .second-section__title
+    font-size: 52px
+  .section-third
+    padding-top: 110px
+  .right-wrapper
+    margin: 0 auto
+  .block-contact
+    &__item
+      display: none
+    &__img
+      width: 85%
+  .button-contact 
+    top: 76px
+    right: -115px
+  .block-description
+    max-width: 90%
+    max-height: 100%
+    margin: 0 auto
+    &__button
+      width: 130px
+      height: 49px
+    &__text
+      max-height: 100%
+  .section-four
+    padding-top: 180px
+    &__title
+      font-size: 40px
+      margin-bottom: 45px
+      margin-top: 45px
+  .cards-box-two
+    &__box
+      margin-left: 0
+      margin-bottom: 10px
+  .cards-box-two__box:nth-child(2n+1)
+    margin-bottom: 10px
+    margin-right: 10px
+  .section-five
+    height: 100%
+    margin-top: 0
+    padding-top: 35px
+  .slider
+    &__block
+      margin-right: 0
+      margin: 0 auto
+    &__block:last-child
+      display: none
+    &__button
+      margin-top: -73px
+    &__button-item
+
+  .elipse
+    clip-path: ellipse(34.07% 68.52% at 48.87% 25.4%)
+    width: 296.5px
+    height: 148px
+
+  .banner
+    &__title
+      font-size: 42px
+    &__button
+      width: 200px
+      height: 70px
+      margin: 0 auto
+  .banner-size
+    width: 90%
+    margin: 0 auto
+  footer
+    display: flex
+    flex-direction: column
+    justify-content: center
+  .footer
+    width: 90%
+  .nav-menu-footer
+    &__item
+      margin-right: 16px
+
+  .block-description__button
+    display: none
+  .button-contact
+    display: none
+  .button-mobile
+    display: flex
+    width: 140px
+    height: 60px
+    font-size: 18px
+    background: #3E86F5
+    justify-content: center
+    align-items: center
+    border-radius: 10px
+    margin: 0 auto
+    margin-top: 20px
