@@ -1,0 +1,201 @@
+*
+  box-sizing: border-box
+
+@font-face 
+  font-family: "Roboto"
+  src: url('../font/roboto-regular-webfont.woff2')
+  font-weight: regular
+  font-style: normal
+
+html
+  font-family: "Roboto"
+
+$red: #FE2C2B
+$white: #FBFBFB
+
+.container-fluid
+  padding: 0
+
+// carusel img styles and icon
+.custom-size-img
+  object-fit: cover
+  width: 100vw
+  height: 100vh
+  filter: brightness(30%) grayscale(100%)
+.carousel-control-next, .carousel-control-prev
+  opacity: 0.6
+.carousel-control-next-icon, .carousel-control-prev-icon
+  background-image: none
+  font-size: 3rem
+  color: $white
+  opacity: 1
+
+// top menu fixed
+.carousel-inner
+  position: relative
+.top-menu 
+  width: 100%
+  height: 100px
+  background-color: rgba(255, 255, 255, 0.087)
+  position: fixed
+  z-index: 2
+  display: flex
+  justify-content: space-evenly
+  transition: 1s
+.top-menu-background-croll
+  background-color: rgb(18, 17, 17)
+  transition: 1s
+
+// logo top
+.logo
+  background-image: url(../images/logo.svg)
+  background-repeat: no-repeat
+  background-position: center
+  width: 100%
+  height: 100%
+  max-width: 350px
+  max-height: 350px
+  min-width: 240px
+
+// navigation
+.nav
+  align-items: center
+  &__list
+    display: inline-flex
+  &__list:last-child
+    padding-left: 0
+  &__item
+    list-style: none
+    margin-right: 15px
+  &__link
+    text-decoration: none
+    padding: 8px
+    color: $white
+    font-size: 18px
+    white-space: nowrap
+    transition: color 0.5s
+  &__link:hover
+    color: $red
+// main header
+.main-header
+  position: absolute
+  top: 40%
+  left: 20%
+  z-index: 2
+  max-width: 500px
+  max-height: 300px
+  width: 100%
+  height: 100%
+  color: $white
+  &__element
+    color: $red
+  &__section
+
+// cards services
+.background-service
+  background-color: #282C34
+.cards-services
+  color: $white
+  display: flex
+  flex-wrap: wrap
+  flex-direction: row
+  padding: 50px 0 80px 0
+  justify-content: center
+  &__item
+    max-width: 250px
+    min-height: 300px
+    width: 100%
+    height: 100%
+    border-radius: 10px
+    margin: 0 5px 20px 5px
+    text-align: center
+    position: relative
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    z-index: 1
+    border: 2px solid #262626
+  &__item:last-child
+    margin-right: 0
+  &__header
+    font-weight: bold
+  &__section
+    font-size: 1.1rem
+    line-height: 30px
+  &__button
+    position: absolute
+    top: 80%
+    right: 0
+    left: 0
+    margin: 0 auto
+    max-width: 100px
+
+.img-slider-1
+  background-image: url(../images/slider-1.jpg)
+.img-slider-2
+  background-image: url(../images/slider-2.jpg)
+.img-slider-3
+  background-image: url(../images/slider-3.jpg)
+.img-slider-4
+  background-image: url(../images/slider-4.jpg)
+.img-slider-5
+  background-image: url(../images/slider-5.jpg)
+
+.img-slider
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center center
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+  z-index: -1
+  transition: 0.5s
+  border-radius: 8px
+  filter: brightness(30%)
+
+.cards-services__section:hover ~ .img-slider, .cards-services__header:hover ~ .img-slider, .cards-services__button:hover ~ .img-slider, .img-slider:hover
+  filter: brightness(25%) blur(3px)
+  transition: 0.5s
+
+// about us
+.aboutus
+  width: 100%
+  height: 1000px
+  display: flex
+  justify-content: center
+  color: $white
+  &__img
+    background-image: url(../images/workshop.jpg)
+    background-repeat: no-repeat
+    background-position: centerc center
+    background-size: cover
+    width: 100%
+    height: 100%
+    max-width: 500px
+    max-height: 500px
+    min-height: 200px
+    min-width: 300px
+    border-radius: 10px
+    border: 3px solid #262626
+    box-shadow: 0px 0px 15px 0px #4b4b4bbf
+    margin-right: 40px
+    display: none
+  &__article
+    width: 100%
+    height: 100%
+    max-width: 370px
+    max-height: 500px
+    display: none
+
+  &__header
+    text-align: center
+    font-weight: bold
+    font-size: 2.5rem
+  &__section
+    font-size: 1.2rem
+    line-height: 32px
