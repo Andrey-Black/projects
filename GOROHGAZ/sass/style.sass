@@ -1,0 +1,591 @@
+*
+  box-sizing: border-box
+
+@font-face 
+  font-family: "Roboto"
+  src: url('../font/roboto-regular-webfont.woff2')
+  font-weight: regular
+  font-style: normal
+
+html
+  width: 100%
+  max-width: 100%
+  overflow-x: hidden //? Отвечает за отстутствие горизонтального скролла при анимации
+  font-family: "Roboto"
+  scroll-behavior: smooth
+
+body
+  background-color: #282C34
+  width: 100%
+  max-width: 100%
+  overflow-x: hidden
+
+$red: #FE2C2B
+$white: #FBFBFB
+.container-fluid
+  padding: 0
+
+// carusel img styles and icon
+.custom-size-img
+  object-fit: cover
+  width: 100vw
+  height: 100vh
+  filter: brightness(30%) grayscale(100%)
+.carousel-control-next, .carousel-control-prev
+  opacity: 0.6
+.carousel-control-next-icon, .carousel-control-prev-icon
+  background-image: none
+  font-size: 3rem
+  color: $white
+  opacity: 1
+
+// top menu fixed
+.carousel-inner
+  position: relative
+.top-menu 
+  width: 100%
+  height: 100px
+  position: fixed
+  z-index: 50
+  display: flex
+  justify-content: space-evenly
+  transition: 1s
+.top-menu-background-croll
+  background-color: rgb(18, 17, 17)
+  transition: 0.5s
+  
+// logo top
+.logo
+  background-image: url(../images/logo.svg)
+  background-repeat: no-repeat
+  background-position: center 65%
+  height: 100%
+  width: 100px
+  min-width: 300px
+  transition: all 1s
+
+.header-service, .header-gallery
+  font-weight: bold
+  color: $white
+  text-align: center
+  margin-top: 30px
+  margin-bottom: 30px
+
+// navigation
+.hamburger-button
+  display: none
+  position: relative
+  width: 45px
+  height: 34px
+  top: 2rem
+  right: 2rem
+  z-index: 100
+  transition: 0.3s ease-in-out
+  span
+    position: absolute
+    height: 8px
+    border-radius: 4px
+    width: 45px
+    background-color: $red
+    top: 0
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out
+  span:nth-child(1)
+    top: 0
+  span:nth-child(2), span:nth-child(3)
+    top: 13px
+  span:nth-child(4)
+    top: 26px
+.hamburger-active span
+  background-color: $white
+.hamburger-active span:nth-child(1), .hamburger-active span:nth-child(4)
+  opacity: 0
+.hamburger-active span:nth-child(2)
+  transform: rotate(45deg)
+.hamburger-active span:nth-child(3)
+  transform: rotate(-45deg)
+
+.nav
+  height: 100%
+  &__list
+    display: flex
+    align-items: center
+    width: 100%
+    margin-bottom: 0
+  &__list:last-child
+    padding-left: 0
+  &__item
+    list-style: none
+    margin-right: 10px
+  &__link
+    text-decoration: none
+    padding: 5px
+    color: $white
+    font-size: 20px
+    white-space: nowrap
+    transition: color 0.5s
+  &__link:hover
+    color: $red
+  &__phone
+    position: relative
+    color: $white
+    font-size: 20px
+    white-space: nowrap
+  &__phone::before
+    content: ''
+    width: 0
+    height: 2px
+    background-color: $white
+    transition: width 0.5s
+    position: absolute
+    top: 100%
+    left: 0
+    bottom: 0
+    right: 0
+  &__phone:hover:before
+    width: 100%
+  &__item-menu
+    position: relative
+  &__item-menu > a
+    padding: 5px 6px 5px 5px
+  &__item-menu:hover &__list-hidden
+    visibility: visible
+  &__list-hidden
+    visibility: hidden
+    list-style: none
+    padding-left: 0
+    position: absolute
+    background-color: rgb(18, 17, 17)
+
+// main header
+.main-header
+  position: absolute
+  top: 25%
+  left: 0
+  right: 0
+  margin: 0 auto
+  z-index: 2
+  max-height: 300px
+  width: 100%
+  height: 100%
+  max-width: 380px
+  color: $white
+  &__element
+    color: $red
+
+// cards services
+.cards-services
+  color: $white
+  display: flex
+  flex-wrap: wrap
+  flex-direction: row
+  padding-bottom: 50px
+  justify-content: center
+  &__item
+    max-width: 300px
+    min-height: 300px
+    width: 100%
+    height: 100%
+    border-radius: 10px
+    margin: 0 10px 20px 10px
+    text-align: center
+    position: relative
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    z-index: 1
+    border: 2px solid #262626
+  &__item:last-child
+    margin-right: 0
+  &__header
+    font-weight: bold
+    margin-top: 20px
+  &__section
+    font-size: 1.2rem
+    line-height: 28px
+  &__button
+    position: absolute
+    top: 80%
+    right: 0
+    left: 0
+    margin: 0 auto
+    max-width: 100px
+
+.img-slider-1
+  background-image: url(../images/slider-1.jpg)
+.img-slider-2
+  background-image: url(../images/slider-2.jpg)
+.img-slider-3
+  background-image: url(../images/slider-3.jpg)
+.img-slider-4
+  background-image: url(../images/slider-4.jpg)
+.img-slider-5
+  background-image: url(../images/slider-5.jpg)
+
+.img-slider
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center center
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+  z-index: -1
+  transition: 0.5s
+  border-radius: 8px
+  filter: brightness(50%)
+
+//? тильда ~ родственный селектор стиль применяется на одном уровне с cards-service-***
+.cards-services__section:hover ~ .img-slider, .cards-services__header:hover ~ .img-slider, .cards-services__button:hover ~ .img-slider, .img-slider:hover
+  filter: brightness(35%) blur(3px)
+  transition: 0.5s
+
+// about us
+.aboutus
+  display: flex
+  justify-content: center
+  color: $white
+  padding-bottom: 50px
+  &__wrapper-img
+    margin-right: 40px
+  &__img
+    background-image: url(../images/workshop.jpg)
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+    width: 100vw
+    height: 100vh
+    max-width: 500px
+    max-height: 500px
+    min-width: 440px
+    border-radius: 10px
+    border: 3px solid #262626
+    box-shadow: 0px 0px 15px 0px #4b4b4bbf
+    margin-right: 40px
+  &__article
+    width: 100%
+    height: 100%
+    max-width: 330px
+    max-height: 500px
+  &__header
+    text-align: center
+    font-weight: bold
+    font-size: 2.5rem
+  &__section
+    font-size: 1.2rem
+    line-height: 32px
+    margin-bottom: 0
+
+// video
+.video
+  display: flex
+  justify-content: center
+  max-width: 850px
+  &__frame
+    width: 100vw
+    height: 100vh
+    max-height: 500px
+
+// galerry
+.gallery
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
+  &__container
+    max-width: 300px
+    max-height: 300px
+    overflow: hidden
+    margin: 0 10px 20px 10px
+    border-radius: 10px
+  &__img
+    width: 100vw
+    height: 100vh
+    max-width: 300px
+    max-height: 300px
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: cover
+    display: inline-flex
+    justify-content: center
+    flex-direction: column
+    font-size: 18px
+    transition: 0.8s
+    position: relative
+    border-radius: 10px
+  &__img:hover
+    cursor: pointer
+    transform: scale(1.1)
+  &__img::before
+    content: ''
+    width: 100%
+    height: 100%
+    z-index: 100
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    transition: 1s
+    z-index: 2
+    background-color: #1e1c1c8a
+  &__img:hover:before
+    background-color: #fe2b2ba0
+  &__text, &__header
+    color: $white
+    margin: 0 auto
+    text-align: center
+    z-index: 30
+  &__text
+    opacity: 0
+    transition: 0.5s
+    transform: translate(0, 80px)
+    overflow: hidden
+  &__header
+    transition: 1s
+    position: relative
+    margin-bottom: 10px
+    font-weight: bold
+  &__header::after
+    content: ''
+    position: absolute
+    height: 2px
+    width: 0
+    background-color: #fff
+    top: 100%
+    right: 0
+    bottom: 0 
+    left: 0
+    transition: width 0.5s
+  &__img:hover > &__header::after
+    width: 100%
+  &__img:hover > &__text
+    opacity: 1
+    transform: translate(0, 0)
+    
+.img-gallery-1
+  background-image: url(../images/ff.webp)
+.img-gallery-2
+  background-image: url(../images/BMW_G05_45e_IMG_3714.jpg)
+.img-gallery-3
+  background-image: url(../images/daewoo_lanos__286864754f.jpg)
+.img-gallery-4
+  background-image: url(../images/tq.JPG)
+.img-gallery-5
+  background-image: url(../images/sf.jpg)
+.img-gallery-6
+  background-image: url(../images/si.jpeg)
+.img-gallery-7
+  background-image: url(../images/ml.jpg)
+.img-gallery-8
+  background-image: url(../images/2018_Porsche_Cayenne_V8_Turbo_Tiptronic_4.0_Front.jpg)
+.img-gallery-9
+  background-image: url(../images/rv.webp)
+
+// footer
+.footer
+  background-color: #232020
+  display: flex
+  flex-direction: column
+  &__container-info
+    display: flex
+    flex-direction: row
+    width: 100%
+    height: 100%
+    padding-top: 40px
+    justify-content: space-between
+  &__flex-container-adress-icons
+    display: flex
+    flex-direction: column
+    justify-content: center
+  &__icons-list
+    list-style: none
+    padding-left: 0
+  &__icon
+    font-size: 30px
+    margin-right: 15px
+    display: inline-flex
+  &__icon:last-child
+    margin-right: 0
+  &__icon-link
+    text-decoration: none
+    color: $white
+  &__icon-text
+    font-size: 18px
+  &__adress
+    color: $white
+    margin-bottom: 0
+    white-space: nowrap
+  &__adress-header
+    font-weight: bold
+    line-height: 30px
+  &__adress-header:first-child
+    margin-bottom: 0
+  &__question
+    font-size: 20px
+  &__color-header
+    color: $red
+  &__adress-item
+    font-size: 25px
+    align-items: flex-end
+  &__phone
+    position: relative
+  &__phone::before
+    content: ''
+    width: 0
+    height: 2px
+    background-color: $white
+    transition: width 0.5s
+    position: absolute
+    top: 100%
+    left: 0
+    bottom: 0
+    right: 0
+  &__phone:hover:before
+    width: 100%
+  &__frame-map
+    width: 100vw
+    height: 100vh
+    max-width: 100%
+    margin-right: 30px
+    max-height: 300px
+    border-radius: 8px
+  &__copyright
+    color: $white
+    text-align: center
+    font-size: 18px
+    padding: 15px 0 15px 0
+
+// icons
+.fa-facebook, .fa-telegram, .fa-instagram, .fa-viber
+  transition: 0.2s
+.fa-facebook:hover
+  color: #395590
+.fa-telegram:hover
+  color: #2A9DD5
+.fa-instagram:hover
+  color: #EF0186
+.fa-viber:hover
+  color: #684BC7
+.fa-phone
+  position: relative
+  top: -10%
+
+.custom-tooltip-one //? изменения стиля подсказки bootstrap
+  opacity: 1 !important
+
+//? Якоря
+#page-1, #page-2, #page-3, #page-4
+  scroll-margin: 115px
+
+//? стилизация сколлбара
+body::-webkit-scrollbar
+  width: 15px
+body::-webkit-scrollbar-track
+  background-color: #121111 
+body::-webkit-scrollbar-thumb
+  background-color: #b0b0b0
+  border-radius: 10px
+* //? для firefox
+  scrollbar-width: thin
+  scrollbar-color: #b0b0b0 #121111
+
+/* Компьютерный монитор */
+@media (max-width: 1200px)
+  .container
+    width: 1140px
+
+/* Маленький монитор или горизонтальный планшет */
+@media (max-width: 1199px)
+  .container
+    width: 960px
+
+/* Вертикальный планшет */
+@media (max-width: 991px)
+  .container
+    width: 720px
+  .hamburger-button
+    display: block
+  .top-menu
+    justify-content: space-between
+    flex-direction: row-reverse
+  .logo
+    margin-left: 30px
+  .nav
+    z-index: -1
+    visibility: hidden
+    position: absolute
+    transform: translate(0, -307px)
+    width: 100vw
+    height: 264px
+    background-color: rgb(18, 17, 17)
+    top: 91%
+    transition: 1s
+    &__list
+      flex-direction: column
+    &__list-hidden 
+      visibility: hidden
+      background-color:rgb(18, 17, 17)
+      transition: 1s
+      display: inline-flex
+    &__item-menu
+      position: relative
+      right: 35px
+    &__item
+      margin-right: 0
+      margin-bottom: 15px
+    &__phone
+      margin-right: 0
+    &__item:nth-child(1)
+      animation-delay: 0.2s 
+    &__item:nth-child(2)
+      animation-delay: 0.3s 
+    &__item:nth-child(3)
+      animation-delay: 0.4s 
+    &__item:nth-child(4)
+      animation-delay: 0.5s
+    &__item:nth-child(5)
+      animation-delay: 0.6s
+    &__item-animation
+      animation-delay: 0.7s
+  .nav-active
+    visibility: visible
+    transform: translate(0)
+  .nav-list-hidden-active
+    visibility: visible
+  .aboutus
+    flex-direction: column
+    align-items: center
+    &__img
+      margin-right: 0
+      min-width: 300px
+    &__article
+      max-width: 400px
+    &__section
+      padding-left: 10px
+/* Горизонтальный телефон */
+@media (max-width: 767px)
+  .container
+    width: 540px
+  .footer
+    &__container-info
+      flex-direction: column-reverse
+/* Вертикальный телефон */
+@media (max-width: 575px)
+  .container
+    width: 100%
+  .logo
+    min-width: 250px
+    margin-left: 5px
+  .hamburger-button
+    right: 10px
+  .main-header
+    margin: 0 auto
+    padding-left: 15px
+  .fa-chevron-right, .fa-chevron-left
+    opacity: 0.1
+  .aboutus
+    &__img
+      max-height: 300px
