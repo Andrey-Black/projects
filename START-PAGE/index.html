@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="description">
+  <link rel="stylesheet" href="libs/animate.min.css">
+  <link rel="stylesheet" href="libs/fontawesome-free-6.2.0-web/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>LIST-PROJECT</title>
+</head>
+<body>
+
+<div class="wrapper">
+<div class="header">
+<header>
+    <h1 class="header__headline animate__animated animate__bounceInDown">Привіт, я Андрій веб-розробник початківець</h1>
+    <div class="container header__description animate__animated animate__backInLeft">
+    <p class="header__section">Тут я публікую свої роботи, колись ця сторiнка стане повноцiним сайтом на CMS з моїми роботами корисними снiпетами i статтями. <br><br> Клікніть на зірочки якщо вам потрібен мій контакт.</p>
+    <p class="header__mail"><i class="fa-solid fa-envelope header__mail-icon"></i> Mail: <span class="mail-hidden">********************************</span></p>
+    <p class="header__telegram"><i class="fa-solid fa-paper-plane header__telegram-icon"></i> Telegram: <span class="telegram-hidden">***********</span></p>
+  </div>
+</header>
+</div>
+
+<ul class="list-project animate__animated animate__backInRight">
+  <li class="list-project__item"><a class="list-project__link" href="projects/GUITAR-PORTFOLIO/src/index.html" target="_blank">GUITAR-PORTFOLIO</a><i class="fa-solid fa-chevron-left list-project__icon"></i><p id="guitar" class="list-project__text-hidden"><span style="color: #e92424; font-weight: bold;">Achtung: тут немає нормального адаптива.</span> Це перший макет який я зверстав, він прямо такий собі але це перша моя повноцінна робота яку хочаб можна було показати комусь, до цьго я вчився верстати якісь блокі і дуже примітивні макети без складних єлементів, тут немає адаптива але у мене немає бажання його сюди додавати так як простіше буде одразу переверстати нормально цей макет, а так він зараз в орігіналі))</p></li>
+  <li class="list-project__item"><a id="trello" class="list-project__link" href="projects/TRELLO/src/index.html" target="_blank">TRELLO</a><i class="fa-solid fa-chevron-left list-project__icon"></i>
+  <p class="list-project__text-hidden">Якись макет знайдений на просторах інтернету, просто адаптивно зверстаний макет, але зараз з часом і досвідом розумію що багато чого можна було зробити по іншому. </p></li>
+  <li class="list-project__item"><a class="list-project__link" href="https://vrd.org.ua" target="_blank">VRD</a><i class="fa-solid fa-chevron-left list-project__icon"></i><p id="vrd" class="list-project__text-hidden">Моя перша задача. на цьому сайті я зробив мобільну версію, фактично більшість часу пішло на навігаційне меню яке дуже криво працювало а на мобільній версії його фактично не було,  зверстати просто статичне меню відносно просто але серйозна проблема була для мене в тому що сайт є динамічним з СMS, потрібно було його зверстати так щоб нові пункти які додаються через адмін панель нормально відображались, а нові згенеровані під-меню у меню отримували кнопку відкритяя і стилі, також кнопка мала працювати так щоб відкриваючи інше під-меню минуле закривалося,  крім того прийшлось внести багато правок в різні частини сайту де це було необхідно. Це була не просто для мене задача так як на той момент я взявся за неї з самими мінімальними знаннями в сфері веб-розробки, і тим більше без знаннь бекенду</p></li>
+  <li class="list-project__item"><a class="list-project__link" href="projects/GOROHGAZ/index.html" target="_blank">GOROH<span style="color: #FE2C2B">GAZ</span></a><i class="fa-solid fa-chevron-left list-project__icon"></i><p id="gorohgaz" class="list-project__text-hidden">Мiй перший повноціний тестовий сайт, з гумовую адаптивною версткою, слайдером галереєю анімаціями, сайт повністю розроблений мною від моменту розробки макета до кінечного виглядку, в ньго я вклав всі знання і досвід які до цьго отримав на минулих проектах, в майбутньому я хочу розробити для ньго калькулятор розрахунку вартості бензина в порівнянні з газом,  розробити мультимовність, i посадити на СMS.</p></li>
+</ul>
+
+<div class="copyright">© Andrii 2022</div>
+</div>
+<script src="libs/wow.min.js"></script>
+<script>
+new WOW().init();
+</script>
+<script src="libs/jquery.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
