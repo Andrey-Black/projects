@@ -1,0 +1,30 @@
+@mixin style-link ($color)
+  text-transform: uppercase
+  text-decoration: none
+  color: $color-grey
+  display: inline-block
+  color: $color
+
+@mixin clearfix
+  &::after
+    content: ''
+    display: table
+    clear: both
+
+@mixin respond($break-point)
+
+  @if $break-point == big-screen
+    @media only screen and (min-width: 1800px)
+      @content
+
+  @if $break-point == tab-land
+    @media only screen and (max-width: 1240px)
+      @content
+
+  @if $break-point == tab-port
+    @media only screen and (max-width: 900px)
+      @content
+
+  @if $break-point == phone
+    @media only screen and (max-width: 600px)
+      @content
